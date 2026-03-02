@@ -1,0 +1,363 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{geometry}
+\geometry{paperheight=26in}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+\usepackage[T1]{fontenc} % default font
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.08003pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+\item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}
+\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=0.15in, label={}]}
+    \newcommand{\resumeSubHeadingListEnd}{
+\end{itemize}}
+\newcommand{\resumeItemListStart}{
+\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{
+\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge \scshape Ajinkya Gokule} \\ \vspace{1pt}
+  \small 541-286-2478
+  $|$
+  \href{mailto:ajinkyagokule@gmail.com}{\underline{ajinkyagokule@gmail.com}}
+  $|$
+  \href{https://devpost.com/ajinkyagokule}{\underline{devpost.com/ajinkyagokule}}
+  $|$
+  \href{https://github.com/aj-arts}{\underline{github.com/aj-arts}}
+  $|$
+  \href{https://linkedin.com/in/ajinkyagokule}{\underline{linkedin.com/in/ajinkyagokule}}
+
+\end{center}
+
+%-----------EDUCATION-----------
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Honors Bachelor of Science in Computer Science, Minor in Economics}{\textbf{GPA 4.0}}
+{Oregon State University}{Expected graduation - June 2026}
+
+\resumeSubheading
+{Master of Science in Artificial Intelligence}{\textbf{GPA 4.0}}
+{Oregon State University}{Expected graduation - \textbf{June 2027}}
+
+\resumeItem{\textbf{Relevant Coursework: }Data Structures and Algorithms,
+  Deep Learning, Operating System 1 and 2,
+  Web/Mobile/Cloud App development,
+  Computer Security and Networking,
+  Computer Architecture and Assembly Programming,
+  Discrete Mathematics,
+  Linear Algebra,
+  Vector Calculus
+}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Microsoft Product Management Intern}{June 2026 - September 2026}
+{Security Organization, Microsoft}{Redmond, WA}
+\resumeItemListStart
+\resumeItem{Incoming PM intern driving security product strategy and roadmap with cross-functional teams}
+\resumeItemListEnd
+
+\resumeSubheading
+{Multi-Agent Systems Developer}{May 2025 - Present}
+{Genesis Team at Oregon State University}{Corvallis, OR}
+\resumeItemListStart
+\resumeItem{Owned roadmap for an IP Patent Identifier agentic app; translated stakeholder needs into weekly deliverables}
+\resumeItem{Deployed production AI agents via Strands SDK on AWS AgentCore, orchestrating tools via MCP}
+\resumeItem{Led an 8-person team across AWS/Azure/Vertex; drove tradeoffs (cost/latency/security) and release readiness}
+\resumeItemListEnd
+
+\resumeSubheading
+{HP Software and Research Intern}{Feb 2025 - Septeber 2025}
+{HP Engineering Modelling and Analysis Group}{Corvallis, OR}
+\resumeItemListStart
+\resumeItem{Leading development of Physics-Informed Neural Networks to model fluid flow and heat transfer in microchips}
+\resumeItem{Approximating 3D Navier-Stokes equations in semiconductor cooling, which is an unsolved physics problem}
+\resumeItem{Achieved velocity profile predictions within $\pm$5\% margin of the analytical solution}
+\resumeItemListEnd
+
+\resumeSubheading
+{AI Backend Software Engineer Intern}{April 2024 - June 2024}
+{College of Business, OSU}{Corvallis, OR}
+\resumeItemListStart
+\resumeItem{Planned and developed an interactive chatbot with a team of 6 to help 500-600 OSU business freshmen yearly}
+\resumeItem{Implemented Retrieval-Augmented Generation (RAG) LLM using LlamaIndex for efficient information retrieval}
+\resumeItem{Deployed a working prototype on Amazon Web Services with professor backend for uploading custom documents}
+\resumeItemListEnd
+
+\resumeSubheading
+{AI Security Research Assistant}{December 2023 - Present}
+{Secure AI Systems Lab (SAIL), OSU}{Corvallis, OR}
+\resumeItemListStart
+\resumeItem{Researching adversarial robustness of Implicit Neural Representation and NFT-based image classifiers}
+\resumeItem{Assessing robustness against PGD attacks and novel defenses on datasets like MNIST, CIFAR10, and CIFAR100}
+\resumeItemListEnd
+
+\resumeSubheading
+{Research Assistant}{Nov. 2022 -- Jun. 2023}
+{SoundBendor Lab, OSU}{Corvallis, OR}
+\resumeItemListStart
+\resumeItem{Developed unit tests to ensure consistent functionality of NoteValue class in Dr. Donnelly's MusicAI}
+\resumeItem{Tested and implemented 100 test cases for comparison, dunder, statistical and conditional operators}
+\resumeItem{Presented my research in-person at the URSA Spring Symposium with a poster in the Memorial Union}
+\resumeItemListEnd
+
+\resumeSubheading
+{Calculus Teaching Assistant}{January 2023 -- April 2024}
+{College Of Science, OSU}{Corvallis, OR}
+\resumeItemListStart
+\resumeItem{Tutoring 500+ students in a peer-to-peer environment for calculus and discrete math}
+\resumeItem{Facilitating small group student learning and task accomplishment}
+\resumeItem{TA's reduced DFW (Grade D, F or withdraw) rate among students from 33\% to 7\%}
+\resumeItemListEnd
+
+\resumeSubheading
+{Resident Assistant}{Sep. 2023 -- Jun. 2024}
+{University Housing and Dining, OSU}{Corvallis, OR}
+\resumeItemListStart
+\resumeItem{Supporting 35 residents through regular check-ins and resource sharing to empower them}
+\resumeItem{Organizing 4 events per term, fostering student interaction with up to 20+ attendees per event}
+\resumeItemListEnd
+
+\resumeSubheading
+{Academic Learning Assistant}{Sep. 2024 -- Present}
+{University Housing and Dining, OSU}{Corvallis, OR}
+\resumeItemListStart
+\resumeItem{Counsel 300+ students academically through regular check-ins and resource sharing to empower them}
+\resumeItem{Organize 2 events/workshops per term, fostering student development with up to 50+ attendees per event}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{3D Sound and Visual Aid - Jedi Vision partnered with NVIDIA} \href{https://github.com/Jedi-Vision/jedi-vision-nano-code}{[Link]}}{September 2025}
+\resumeItemListStart
+\resumeItem{Building AI visual aid for visually impaired using Vision Transformers and bone conduction}
+\resumeItem{Deploying ViT and depth models for real-time object detection and spatial mapping}
+\resumeItem{Creating 3D audio guidance via bone conduction headphones with intelligent path planning}
+\resumeItem{\textbf{Technologies:} Computer Vision, Depth Estimation, Spatial Audio}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{(Hackathon Winner) Student Rideshare Platform - CatchARide} \href{https://devpost.com/software/catcharide}{[Link]}}{April 2025}
+\resumeItemListStart
+\resumeItem{A student rideshare platform to match drivers with extra seats with passengers headed in a similar direction}
+\resumeItem{Designed a custom algorithm using Route Optimization API to optimize routes between drivers and passengers}
+\resumeItem{Implemented multi-authentication methods with traditional login and OAuth2.0 for secure user onboarding}
+\resumeItem{Won Entrepreneurial track at Beaver Hacks Spring 2025 among 200 participants}
+\resumeItem{\textbf{Technologies:} Google Route Optimization API, OAuth2.0, PostgreSQL, DigitalOcean}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Full-Stack Mobile App - Campus Companion} \href{https://github.com/Carson274/CampusView}{[Link]}}{September 2024}
+\resumeItemListStart
+\resumeItem{Spearheaded full-stack mobile app development, leading Agile sprints and task management with GitHub Projects}
+\resumeItem{Collaborated with 7 teammates to design system architecture, interfaces and schemas using PlantUML}
+\resumeItem{Deployed a microservice for realtime scraping of webpages using BeautifulSoup and caching in a NoSQL database}
+\resumeItem{\textbf{Technologies:} React Native, Expo, FastAPI, NoSQL, BeautifulSoup, PlantUML}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Secure x86 OS Implementation - JOS Operating System} \href{https://github.com/aj-arts/jos-operating-system-implementation}{[Link]}}{September 2024}
+\resumeItemListStart
+\resumeItem{Built 32-bit x86 OS: bootloader, paging kernel, syscalls, preemptive scheduling, IPC}
+\resumeItem{Brought up protected mode (GDT/IDT), paging/traps; designed user-kernel ABI}
+\resumeItem{Ran on QEMU with GDB; cross-compiled with GNU Make, GCC, Binutils}
+\resumeItem{\textbf{Technologies:} C, x86 Assembly, QEMU, GDB, GNU Make, GCC, Binutils}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Lightweight RL Framework Paper - RLoRA} \href{https://tinyurl.com/rlorafullpaper}{[Link]}}{June 2025}
+\resumeItemListStart
+\resumeItem{Co-authored and implemented a lightweight RL framework combining QLoRA and GRPO for SLMs}
+\resumeItem{Stabilized training by LoftQ initialization, rank-stabilized LoRA, maintaining low KL-divergence over 500 RL steps}
+\resumeItem{Reduced GPU memory usage by 26\%, cut training examples by 66\%, and halved compute cost while matching or surpassing SOTA with 57\% pass@1 across math-reasoning benchmarks (AIME24, MATH-500, AMC23, etc)}
+\resumeItem{\textbf{Technologies:} Transformer Reinforcement Learning, QLoRA, GRPO, vLLM, Pytorch, Lighteval}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{(Hackathon Winner) Class Notification Extension - GetTheDamClass} \href{https://devpost.com/software/getthedamclass}{[Link]}}{October 2024}
+\resumeItemListStart
+\resumeItem{A Chrome extension with 37 active users using React.js (TS) and Flask, notifying OSU students of class openings}
+\resumeItem{Developed a secure backend with Docker, Flask APIs, MySQL, and Bcrypt for authentication}
+\resumeItem{Reverse engineered OSU's registration API and optimized a cron job for real-time enrollment checks}
+\resumeItem{Won BeaverHacks Fall 2024 among 57 participants at Oregon State University}
+\resumeItem{\textbf{Technologies:} Chrome Web API, React.js, SQL, Docker, Python, Typescript}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{(Hackathon Winner) AI-Generated Retro Radio Show - Backcast} \href{https://devpost.com/software/timeless-w1ze62}{[Link]}}{May 2024}
+\resumeItemListStart
+\resumeItem{Produced a 24/7 retro radio show with AI-generated music and jockey discussing historical events of each day}
+\resumeItem{Implemented digital and physical interfaces, utilizing Flask on AWS EC2 and custom-modified antique radios}
+\resumeItem{Engineered a robust MP3 streaming system for diverse devices and a 3JS-rendered interactive web interface}
+\resumeItem{Won Hack Through Time Spring 2024 among 56 participants at Oregon State University}
+\resumeItem{\textbf{Technologies:} Flask, AWS EC2, OpenAI, Google Cloud TTS, PyDub, ESP32, C++/Arduino, threeJS}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{(Hackathon Winner) ML Focus Extension - Focii} \href{https://devpost.com/software/focii}{[Link]}}{October 2023}
+\resumeItemListStart
+\resumeItem{Built a fullstack extension using ML word embeddings to block distracting sites and boost user focus}
+\resumeItem{Achieved a remarkable 75\% reduction in classification error by Nelder-Mead optimization method}
+\resumeItem{Won Hack Education Fall 2023 among 95 participants at Oregon State University}
+\resumeItem{\textbf{Technologies:} Transformers, Chrome Web API, Pytorch, Javascript, HTML/CSS, Node.js, Figma}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{(Hackathon Winner) AI Short Video Generator - shortsGenerator} \href{https://devpost.com/software/shorts-generator}{[Link]}}{May 2023}
+\resumeItemListStart
+\resumeItem{Collaborated with 3 teammates to implement a command line tool to generate short form videos using AI}
+\resumeItem{Reduced video creation time from days to mere seconds, significantly boosting productivity}
+\resumeItem{Won Beaver Hacks Spring 2023 among 66 participants at Oregon State University}
+\resumeItem{\textbf{Technologies:} Reddit and Open AI API, Python, Bash}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Multiplayer Party Game - GuessTheBeaver}}{January 2023}
+\resumeItemListStart
+\resumeItem{Created a fullstack application inspired by the party game Spyfall for Beaver Hacks Winter 2023}
+\resumeItem{Hosted a server using Flask to enable realtime multiplayer functionality supporting upto 20 players}
+\resumeItem{Designed and deployed an interactive frontend using Vanilla Javascript on Repl}
+\resumeItem{\textbf{Technologies:} Jinja, Flask, SQL, Repl, Javascript, HTML/CSS, Node.js, Figma, Git}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Macroeconomic Interactive Graph}}{November 2022}
+\resumeItemListStart
+\resumeItem{Built an interactive Desmos tool to visualize effects of changing money supply}
+\resumeItem{Connected money supply and GDP using linear and compositional functions}
+\resumeItem{Used in OSU Macroeconomics to engage 200+ students per term in live demos}
+\resumeItem{\textbf{Technologies:} Desmos, Demoscript}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+    \item{
+        \textbf{Languages}{: Python, Javascript/Typescript, HTML/CSS, C/C++, SQL, NoSQL, Bash, Latex, x86 Assembly} \\
+        \textbf{Frameworks}{: Expo, Pytorch, Llama Index, React, Node.js, Flask, FastAPI, BeautifulSoup, PlantUML} \\
+        \textbf{Developer Tools}{: AWS, Docker, Git, Jira, Slack, Figma, QEMU, GDB, GNU Make, GCC, Binutils}
+    }}
+\end{itemize}
+
+%----------AWARDS AND EXTRA CURRICULARS---------
+
+\section{Awards and Extra Curriculars}
+\begin{itemize}[noitemsep]
+  \item \textbf{5x Hackathon Winner}, System Design Lead at OSU Product Management Club
+  \item Musician - can play 7 different instruments, Dancer - Kinetic Kpop
+  \item 2x Undergraduate Research, Scholarship and the Arts (URSA) Engage Recipient, Best TA 2023 Award
+  \item Dean's List 7x, Drucilla Shepard Smith Award for 4.0, Honors College Differential Scholarship Recipient
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,45 @@
+# LaTeX build outputs
+*.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.lof
+*.lot
+*.lol
+*.idx
+*.ilg
+*.ind
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+*.ps
+*.thm
+*.loa
+*.xmpi
+*.synctex(busy)
+
+# Latexmk + cache
+_minted-*/
+.latexmkrc
+
+# OS/editor noise
+.DS_Store
+*.swp
+*.swo
