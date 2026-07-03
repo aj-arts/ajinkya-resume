@@ -23,12 +23,12 @@ latexmk -pdf ajinkya-gokule-[role]-resume.tex
 ## Release Model
 
 On every push to `main`, GitHub Actions:
-- discovers all root-level `ajinkya-gokule-*-resume.tex` files
-- compiles each into a PDF
-- publishes each variant to its own rolling release tag: `latest-[role]`
+- compiles all root-level `ajinkya-gokule-*-resume.tex` files
+- publishes every PDF to a single rolling release tagged `latest`
+- cancels in-progress runs when a newer push arrives (only the most recent changes are released)
 
 Artifact naming:
 - `ajinkya-gokule-[role]-resume.pdf`
 
 Release URL shape:
-- `https://github.com/<owner>/<repo>/releases/download/latest-[role]/ajinkya-gokule-[role]-resume.pdf`
+- `https://github.com/<owner>/<repo>/releases/download/latest/ajinkya-gokule-[role]-resume.pdf`
