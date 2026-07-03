@@ -64,10 +64,10 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-\item\small{
-    {#1 \vspace{-2pt}}
-  }
+\newcommand{\resumeItem}[1]{%
+\item\small{%
+    {#1\vspace{-2pt}}%
+  }%
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -154,9 +154,10 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
 	\small{
 	\item{
-		      \textbf{Languages}{: Python, Javascript/Typescript, HTML/CSS, C/C++, SQL, NoSQL, Bash, Latex, x86 Assembly} \\
-		      \textbf{Frameworks}{: Expo, Pytorch, Convex, Llama Index, React, Node.js, Flask, FastAPI, BeautifulSoup, PlantUML} \\
-		      \textbf{Developer Tools}{: AWS, Vercel, Docker, Git, Jira, Slack, Figma, QEMU, GDB, GNU Make, GCC, Binutils}
+		      \textbf{Languages}{: Python, TypeScript/JavaScript, C/C++, SQL, Bash, x86 Assembly, HTML/CSS, LaTeX} \\
+		      \textbf{AI/ML}{: PyTorch, Transformers, vLLM, QLoRA, GRPO, LlamaIndex, RAG, YOLO, Nelder-Mead Optimization} \\
+		      \textbf{Agents \& Cloud}{: AWS (Bedrock, AgentCore, Lambda, S3), Strands SDK, MCP, A2A, Vercel AI SDK, OpenRouter} \\
+		      \textbf{Frameworks \& Tools}{: React/Next.js, FastAPI, Convex, just-bash, PostgreSQL, Docker, GitHub Actions, QEMU, GDB}
 	      }}
 \end{itemize}
 
@@ -168,7 +169,10 @@
 {Microsoft Cybersecurity Intern}{Present}
 {Cloud + AI, Microsoft}{Redmond, WA}
 \resumeItemListStart
-\resumeItem{Drive AI accelerated security burndowns using frontier cyber LLMs}
+\resumeItem{Architected and led a 6-engineer team building an open-source benchmark testing frontier AI coding agents against hidden prompt-injection attacks: 1,950 runs across 10 models (GPT, Claude, Gemini) in 3 safety modes}
+\resumeItem{Owned end-to-end delivery of an internal AI agent that turns closed security incidents into polished, publish-ready runbooks and retrospectives enriched with Microsoft Graph context, cutting drafting time from hours to minutes}
+\resumeItem{Secured three internet-exposed MCP servers that allowed unauthenticated access, owning two live incident tickets end to end, delegating fixes to engineering owners, and verifying each remediation with an auth-scanning tool}
+\resumeItem{Identified $\sim$3,000 Azure DevOps CI/CD pipelines vulnerable to supply-chain tampering via unpinned GitHub releases, engaging principal engineers to build automated CodeQL detections and prioritize fixes by blast radius}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -250,28 +254,27 @@
 \resumeProjectHeading
 {\textbf{(Microsoft Hackathon Winner) Trust Me Bro - AI Agent Security Benchmark} \href{https://github.com/aj-arts/trust-me-bro}{[Link]}}{June 2026}
 \resumeItemListStart
-\resumeItem{Built a security benchmark platform testing coding agents against prompt-injection attacks}
-\resumeItem{Benchmarked 10 frontier models across 1,950 runs, 3 safety modes, and 18 authored attack scenarios}
+\resumeItem{Built a prompt-injection benchmark; ran 10 frontier models through 1,950 runs across 3 safety modes}
+\resumeItem{Found every model executed hidden attacks, with even the safest failing 18\% of default-prompt runs}
 \resumeItem{Architected a Node agent runtime around a virtual filesystem and shell, isolating runs without containers or VMs}
 \resumeItem{\textbf{Technologies:} just-bash, AI SDK, OpenRouter, Convex, Next.js, TypeScript, Tailwind CSS}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{(NVIDIA Track Winner) AI Medical Bill Transparency Platform - OpenHealth} \href{https://judge.beaverhacks.org/cmlfqho300000kv04wi9199a5/projects/cmoq6w17b014pjv042krgzaxf}{[Link]}}{May 2026}
+{\textbf{(NVIDIA Track Winner) AI Medical Bill Transparency Platform - OpenHealth} \href{https://github.com/NothingSuspiciousOSU/OpenHealth}{[Link]}}{May 2026}
 \resumeItemListStart
-\resumeItem{Engineered a medical bill transparency platform to fight confusing hospital charges using autonomous agents}
-\resumeItem{Created and maintained agent harness and runtime deployment for an autonomous medical bill analysis platform}
-\resumeItem{Developed a multi-modal vision-to-JSON pipeline utilizing reasoning to parse and extract hospital bill details}
+\resumeItem{Engineered a medical bill transparency platform that parses uploaded bills and flags likely overcharges}
+\resumeItem{Built a sandboxed ReAct agent with schema discovery and bounded tool-calling to prevent hallucinated prices}
+\resumeItem{Developed a multi-modal vision-to-JSON pipeline using Nemotron reasoning to extract hospital bill details}
 \resumeItem{\textbf{Technologies:} AWS Lambda, Nemotron, Vercel AI SDK, TypeScript, Convex, UploadThing}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{Agentic LaTeX Resume CI/CD Pipeline} \href{https://github.com/aj-arts/ajinkya-resume}{[Link]}}{October 2025}
 \resumeItemListStart
-\resumeItem{Architected a CI/CD pipeline using AI agents to automate LaTeX resume generation and deployment}
-\resumeItem{Engineered an automated system to tailor resume content for job descriptions via GitHub Actions}
-\resumeItem{This entire resume was generated, tailored, and deployed by this agentic CI/CD workflow}
-\resumeItem{\textbf{Technologies:} LaTeX, GitHub Actions, AI Agents, CI/CD}
+\resumeItem{Architected a pipeline where AI agents tailor resume content per job description, then build and ship via CI/CD}
+\resumeItem{Encoded layout and content rules as agent-readable specs, with automated PDF verification on every release}
+\resumeItem{\textbf{Technologies:} LaTeX, GitHub Actions, latexmk, Agentic Workflows}
 \resumeItemListEnd
 
 \resumeProjectHeading
@@ -289,34 +292,32 @@
 \resumeItem{Architected and deployed a production multi-agent deep research system automating patent prior-art analysis}
 \resumeItem{Orchestrated specialized agents via A2A protocol and Strands SDK, with RAG over Bedrock Knowledge Bases}
 \resumeItem{Deployed a serverless pipeline on AWS Lambda and S3, hosting agent runtimes on AgentCore}
-\resumeItem{\textbf{Technologies:} AWS AgentCore, Bedrock Knowledge Base, A2A, Strands Agent SDK, Typescript, Lambdas, S3}
+\resumeItem{\textbf{Technologies:} AWS AgentCore, Bedrock Knowledge Base, A2A, Strands Agent SDK, TypeScript, Lambda, S3}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{(Hackathon Winner) Student Rideshare Platform - CatchARide} \href{https://devpost.com/software/catcharide}{[Link]}}{April 2025}
+{\textbf{(Entrepreneurial Track Winner) Student Rideshare Platform - CatchARide} \href{https://devpost.com/software/catcharide}{[Link]}}{April 2025}
 \resumeItemListStart
-\resumeItem{A student rideshare platform to match drivers with extra seats with passengers headed in a similar direction}
+\resumeItem{Built a student rideshare platform matching drivers with spare seats to passengers on overlapping routes}
 \resumeItem{Designed a custom algorithm using Route Optimization API to optimize routes between drivers and passengers}
 \resumeItem{Implemented multi-authentication methods with traditional login and OAuth2.0 for secure user onboarding}
-\resumeItem{Won Entrepreneurial track at Beaver Hacks Spring 2025 among 200 participants}
 \resumeItem{\textbf{Technologies:} Google Route Optimization API, OAuth2.0, PostgreSQL, DigitalOcean}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{Full-Stack Mobile App - Campus Companion} \href{https://github.com/Carson274/CampusView}{[Link]}}{September 2024}
 \resumeItemListStart
-\resumeItem{Spearheaded full-stack mobile app development, leading Agile sprints and task management with GitHub Projects}
-\resumeItem{Collaborated with 7 teammates to design system architecture, interfaces and schemas using PlantUML}
-\resumeItem{Deployed a microservice for realtime scraping of webpages using BeautifulSoup and caching in a NoSQL database}
+\resumeItem{Led an 8-person team through Agile sprints, owning task breakdown and delivery via GitHub Projects}
+\resumeItem{Designed the system architecture, API interfaces, and data schemas in PlantUML before implementation}
+\resumeItem{Built a realtime web-scraping microservice with BeautifulSoup backed by NoSQL caching}
 \resumeItem{\textbf{Technologies:} React Native, Expo, FastAPI, NoSQL, BeautifulSoup, PlantUML}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{Secure x86 OS Implementation - JOS Operating System} \href{https://github.com/aj-arts/jos-operating-system-implementation}{[Link]}}{September 2024}
 \resumeItemListStart
-\resumeItem{Built 32-bit x86 OS: bootloader, paging kernel, syscalls, preemptive scheduling, IPC}
-\resumeItem{Brought up protected mode (GDT/IDT), paging/traps; designed user-kernel ABI}
-\resumeItem{Ran on QEMU with GDB; cross-compiled with GNU Make, GCC, Binutils}
+\resumeItem{Built a 32-bit x86 OS from the bootloader up: paging kernel, syscalls, preemptive scheduling, and IPC}
+\resumeItem{Enforced user/kernel privilege separation and memory protection via protected-mode GDT/IDT and trap handling}
 \resumeItem{\textbf{Technologies:} C, x86 Assembly, QEMU, GDB, GNU Make, GCC, Binutils}
 \resumeItemListEnd
 
@@ -335,7 +336,6 @@
 \resumeItem{A Chrome extension with 37 active users using React.js (TS) and Flask, notifying OSU students of class openings}
 \resumeItem{Developed a secure backend with Docker, Flask APIs, MySQL, and Bcrypt for authentication}
 \resumeItem{Reverse engineered OSU's registration API and optimized a cron job for real-time enrollment checks}
-\resumeItem{Won BeaverHacks Fall 2024 among 57 participants at Oregon State University}
 \resumeItem{\textbf{Technologies:} Chrome Web API, React.js, SQL, Docker, Python, Typescript}
 \resumeItemListEnd
 
@@ -345,7 +345,6 @@
 \resumeItem{Produced a 24/7 retro radio show with AI-generated music and jockey discussing historical events of each day}
 \resumeItem{Implemented digital and physical interfaces, utilizing Flask on AWS EC2 and custom-modified antique radios}
 \resumeItem{Engineered a robust MP3 streaming system for diverse devices and a 3JS-rendered interactive web interface}
-\resumeItem{Won Hack Through Time Spring 2024 among 56 participants at Oregon State University}
 \resumeItem{\textbf{Technologies:} Flask, AWS EC2, OpenAI, Google Cloud TTS, PyDub, ESP32, C++/Arduino, threeJS}
 \resumeItemListEnd
 
@@ -354,7 +353,6 @@
 \resumeItemListStart
 \resumeItem{Built a fullstack extension using ML word embeddings to block distracting sites and boost user focus}
 \resumeItem{Achieved a remarkable 75\% reduction in classification error by Nelder-Mead optimization method}
-\resumeItem{Won Hack Education Fall 2023 among 95 participants at Oregon State University}
 \resumeItem{\textbf{Technologies:} Transformers, Chrome Web API, Pytorch, Javascript, HTML/CSS, Node.js, Figma}
 \resumeItemListEnd
 
@@ -363,7 +361,6 @@
 \resumeItemListStart
 \resumeItem{Architected a CLI tool that automates short-form video by synthesizing content from the Reddit API via OpenAI}
 \resumeItem{Streamlined content pipeline to reduce video creation time from days to seconds}
-\resumeItem{Awarded 1st Place at BeaverHacks Spring 2023 among 66 participants at Oregon State University}
 \resumeItem{\textbf{Technologies:} OpenAI API, Reddit API, Python, Bash, FFmpeg}
 \resumeItemListEnd
 
