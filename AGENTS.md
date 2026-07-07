@@ -1,7 +1,8 @@
 # Agent Instructions
 
-Every `\resumeItem{...}` must render as a single line in the compiled PDF — verify with `pdftotext -layout <file>.pdf -` and shorten if it wraps. Exception: if a bullet is well written and its content fully occupies two lines (not spilling just a few words onto the second line), it may stay as two lines — do not break it up or trim it.
+Always use pnpm for Javascript.
+Always use uv for Python.
+If the repository is a Python project, check if the project has a virtual environment and activate it before executing Python commands.
 
-Follow resume-writing best practices (strong action verbs, correct tense, quantified outcomes, honest claims). For any content change, propose at least 3 alternatives and let the user pick before editing.
-
-The compiled PDF must always be exactly one page. Never trim content to achieve this — instead adjust the page height (e.g., `\paperheight` / geometry settings) so everything fits on a single continuous page. Verify the page count after every change (`pdfinfo <file>.pdf` or check `pdftotext` output).
+Do not commit secrets, credentials, or personal profile data. Treat `jobs-applied/profile.yaml` as private application data.
+Do not delete or overwrite application records unless the user explicitly asks for that cleanup.

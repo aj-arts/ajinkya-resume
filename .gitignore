@@ -42,7 +42,6 @@ jobs-applied/profile.yaml
 
 # Latexmk + cache
 _minted-*/
-.latexmkrc
 
 # OS/editor noise
 .DS_Store

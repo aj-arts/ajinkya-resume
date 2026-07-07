@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Editing"
+  short_description: "Interactive resume editing and PDF verification"
+  default_prompt: "Use $resume-editing to edit or polish my resume."

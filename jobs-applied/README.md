@@ -23,9 +23,9 @@ Statuses are **natural language**, not enum codes — be descriptive so future r
 
 ## Applications
 
-| Date | Company | Role | Source | URL | Match% | Status | Time | Notes |
-|------|---------|------|--------|-----|--------|--------|------|-------|
-| 2026-07-07 | Notion | Software Engineer, New Grad | Jobright | https://jobs.ashbyhq.com/notion/a6311f97-4850-4674-a5f3-d9fe5f6f2555?utm_source=jobright | N/A | applied successfully | ~15 min | See `notion-software-engineer-new-grad/`; Ashby required retry after spam/validation false positives |
+| Date | Company | Role | Source | URL | Status | Time | Notes |
+|------|---------|------|--------|-----|--------|------|-------|
+| 2026-07-07 | Notion | Software Engineer, New Grad | Jobright | https://jobs.ashbyhq.com/notion/a6311f97-4850-4674-a5f3-d9fe5f6f2555?utm_source=jobright | applied successfully | ~15 min | See `notion-software-engineer-new-grad/`; Ashby required retry after spam/validation false positives |
 
 ## Pending Questions
 

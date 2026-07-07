@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Application"
+  short_description: "Autonomous job application workflow and records"
+  default_prompt: "Use $job-application to apply for this job."
