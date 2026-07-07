@@ -1,5 +1,10 @@
+# Personal data + credentials (repo is public — never commit)
+jobs-applied/profile.yaml
+
 # LaTeX build outputs
 *.pdf
+# ...but keep submitted resume PDFs in application records
+!jobs-applied/**/*.pdf
 *.aux
 *.log
 *.out
