@@ -25,6 +25,7 @@ Statuses are **natural language**, not enum codes — be descriptive so future r
 
 | Date | Company | Role | Source | URL | Match% | Status | Time | Notes |
 |------|---------|------|--------|-----|--------|--------|------|-------|
+| 2026-07-07 | Notion | Software Engineer, New Grad | Jobright | https://jobs.ashbyhq.com/notion/a6311f97-4850-4674-a5f3-d9fe5f6f2555?utm_source=jobright | N/A | applied successfully | ~15 min | See `notion-software-engineer-new-grad/`; Ashby required retry after spam/validation false positives |
 
 ## Pending Questions
 
@@ -42,3 +43,4 @@ Concise learnings appended after each run. Read this before starting a run. Incl
 - **Timing bottlenecks** — portals or steps that consistently eat time (use the Time column above to spot them)
 
 <!-- Append new insights below as bullets: "- YYYY-MM-DD: <insight>" -->
+- 2026-07-07: Ashby can flag Playwright submissions as possible spam; retrying may then show stale validation errors even when hidden inputs are checked. Re-trigger the visible affected controls, then submit again.
