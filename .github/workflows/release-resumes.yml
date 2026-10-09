@@ -1,38 +1,57 @@
-name: Build and Release Resumes
+name: Build and Release Approved Resume
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+    inputs:
+      variant:
+        description: Approved resume variant to publish
+        required: true
+        type: choice
+        options:
+          - master
+          - swe-pm
 
 permissions:
   contents: write
 
 concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: true
+  group: resume-publishing
+  cancel-in-progress: false
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
 
-      - name: Build PDFs
-        uses: xu-cheng/latex-action@v3
+      - name: Select the approved source
+        id: resume
+        env:
+          RESUME_VARIANT: ${{ inputs.variant }}
+        run: |
+          case "$RESUME_VARIANT" in
+            master|swe-pm) ;;
+            *) echo 'Unsupported resume variant' >&2; exit 1 ;;
+          esac
+          source_file="ajinkya-gokule-${RESUME_VARIANT}-resume.tex"
+          test -f "$source_file"
+          echo "source=$source_file" >> "$GITHUB_OUTPUT"
+          echo "pdf=${source_file%.tex}.pdf" >> "$GITHUB_OUTPUT"
+
+      - name: Build the selected PDF
+        uses: xu-cheng/latex-action@e2f99d4b3685b0da93f97e1b86ad8fab81105098
         with:
-          root_file: ajinkya-gokule-*-resume.tex
-          glob_root_file: true
+          root_file: ${{ steps.resume.outputs.source }}
 
-      - name: Publish rolling release
-        uses: softprops/action-gh-release@v2
+      - name: Publish the selected PDF
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65
         with:
           tag_name: latest
           name: Resume (latest)
           body: |
-            Auto-updated from `${{ github.sha }}` on branch `${{ github.ref_name }}`.
-          files: ajinkya-gokule-*-resume.pdf
+            Selected resume published manually from `${{ github.sha }}`.
+          files: ${{ steps.resume.outputs.pdf }}
+          fail_on_unmatched_files: true
           make_latest: true
           overwrite_files: true

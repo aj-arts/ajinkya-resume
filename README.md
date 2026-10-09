@@ -1,34 +1,32 @@
-# Ajinkya Resume Repository
+# Ajinkya resume publisher
 
-This repository stores source-only LaTeX resume variants and publishes compiled PDFs via GitHub Releases.
+This public repository holds approved LaTeX resume sources and publishes selected PDFs through GitHub Releases. Application tracking and private profile data belong in a separate private workspace.
 
-## Naming Convention
+## Source filenames
 
-Publishable resume entry files must live at repository root and match:
+Supported resume entry files live at the repository root:
 
-`ajinkya-gokule-[role]-resume.tex`
+- `ajinkya-gokule-master-resume.tex`
+- `ajinkya-gokule-swe-pm-resume.tex`, once an approved version has been added
 
-Rules for `[role]`:
-- lowercase
-- examples: `general`, `backend`, `ml-engineer`, `product-analytics`
+## Build locally
 
-## Local Build
+Install TeX Live or MacTeX with `latexmk`, then run:
 
-Install a TeX distribution with `latexmk` available (for example TeX Live or MacTeX), then run:
-
-```bash
-latexmk -pdf ajinkya-gokule-[role]-resume.tex
+```sh
+latexmk -pdf ajinkya-gokule-master-resume.tex
 ```
 
-## Release Model
+Review the compiled PDF before publishing.
 
-On every push to `main`, GitHub Actions:
-- compiles all root-level `ajinkya-gokule-*-resume.tex` files
-- publishes every PDF to a single rolling release tagged `latest`
-- cancels in-progress runs when a newer push arrives (only the most recent changes are released)
+## Publish an approved variant
 
-Artifact naming:
-- `ajinkya-gokule-[role]-resume.pdf`
+Pushing a commit does not publish a resume. After the selected source has been reviewed and committed, open **Actions**, select **Build and Release Approved Resume**, choose **Run workflow**, and select the variant. The selected source must already exist in the chosen branch.
 
-Release URL shape:
-- `https://github.com/<owner>/<repo>/releases/download/latest/ajinkya-gokule-[role]-resume.pdf`
+The workflow builds only that variant and updates its asset in the rolling `latest` release. Other PDF assets remain available.
+
+Existing download links retain this shape:
+
+`https://github.com/aj-arts/ajinkya-resume/releases/download/latest/ajinkya-gokule-master-resume.pdf`
+
+Never add application records, private profile data, raw form captures, credentials, or encrypted private-workspace archives to this public repository.

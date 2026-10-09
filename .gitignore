@@ -45,3 +45,20 @@ _minted-*/
 .DS_Store
 *.swp
 *.swo
+
+# Shared exclusions for every machine
+/private/
+/build/
+/scratch/
+/tmp/
+/outputs/
+/batch-*/
+/.venv/
+/.claude/
+/.env
+/.env.*
+**/profile.yaml
+**/settings.local.json
+*.age
+*.pem
+*.key
